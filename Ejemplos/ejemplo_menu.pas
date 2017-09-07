@@ -1,9 +1,14 @@
+{
+        PROGRAMADOR: Pagani Walter
+        TEMA: Realizar un menu
+        El menu limpia la pantalla, lee la opcion del usuario y repite hasta,
+        que la opcion ingresa es la 0.
+}
+
 program ejemplo_menu;
 uses crt;
-
 var
         respuesta: integer;
-
 begin
         repeat
                 clrscr;

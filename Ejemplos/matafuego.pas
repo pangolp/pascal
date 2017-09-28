@@ -137,6 +137,24 @@ begin
         end;
 end;
 
+function obtenerPrecio(vectorPrecios: precios; codigoPrecio: integer): real;
+var
+        i:integer;
+begin
+        for i:=1 to cantidad do
+                if (codigoPrecio=i) then
+                        obtenerPrecio:=vectorPrecios[i];
+end;
+
+function obtenerModelo(vectorModelos: modelos; codigoModelo: integer): string;
+var
+        i:integer;
+begin
+        for i:=1 to cantidad do
+                if (codigoModelo=i) then
+                        obtenerModelo:=vectorModelos[i];
+end;
+
 procedure generarInforme(var vectorInforme: informe; vectorModelos: modelos; vectorPrecios: precios; vectorPedidos: pedidos);
 var
         i:integer;
@@ -144,13 +162,13 @@ begin
         clrscr;
         for i:=1 to cantidad do
                 begin
-                        vectorInforme[i].modelo:=vectorModelos[i];
-                        vectorInforme[i].precio:=vectorPrecios[i];
+                        vectorInforme[i].modelo:=obtenerModelo(vectorModelos, vectorPedidos[i].codM);
+                        vectorInforme[i].precio:=obtenerPrecio(vectorPrecios, vectorPedidos[i].codP);
                         vectorInforme[i].cantidadR:=vectorPedidos[i].cantidadR;
                         vectorInforme[i].tipoF:=vectorPedidos[i].tipoF;
                         vectorInforme[i].porcentajeDescuento:=vectorPedidos[i].porcentajeDescuento;
-                        vectorInforme[i].descuento:=((vectorPedidos[i].porcentajeDescuento*vectorPrecios[i]))/100;
-                        vectorInforme[i].precioFinal:=vectorPrecios[i] - vectorInforme[i].descuento;
+                        vectorInforme[i].descuento:=((vectorPedidos[i].porcentajeDescuento*vectorInforme[i].precio))/100;
+                        vectorInforme[i].precioFinal:=vectorInforme[i].precio - vectorInforme[i].descuento;
         end;
 end;
 

@@ -20,6 +20,7 @@ var
         v:vector;
         acu:integer;
 begin
+        clrscr;
         for i:=1 to 2 do
         begin
                 for j:=1 to 2 do
@@ -27,6 +28,7 @@ begin
                         writeln('Ingrese un numero: ');
                         readln(m[i,j]);
                 end;
+                writeln('');
         end;
         for i:=1 to 2 do
         begin
@@ -35,6 +37,7 @@ begin
                         acu:=acu+m[i,j];
                 v[i]:=acu;
         end;
+        writeln('');
         for i:=1 to 2 do
                 writeln('El valor de la posicion ', i, 'es: ', v[i]);
         readkey;

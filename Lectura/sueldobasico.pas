@@ -9,6 +9,7 @@ var
         ley, jubilacion, os: real;
         cantidad: integer;
 begin
+        clrscr;
         writeln('Ingrese nombre y apellido: ');
         readln(nombreyapellido);
         writeln('Ingrese sueldo basico: ');
@@ -36,6 +37,7 @@ begin
         writeln('Ley: ', (ley):4:2);
         writeln('Obra social: ', (os):4:2);
         writeln('Jubilacion: ', (jubilacion):4:2);
+        writeln('Descuento por ausencia: ', (ausentes):4:2);
         writeln('Sueldo: ', (sueldo):4:2);
         writeln('Sueldo final: ', (sueldo_final):4:2);
         readkey;

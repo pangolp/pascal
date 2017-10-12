@@ -17,6 +17,7 @@ type
         end;
 var
         p:persona;
+        respuesta: string;
 begin
         clrscr;
         writeln('Ingrese el nombre de la persona: ');
@@ -25,7 +26,13 @@ begin
         readln(p.edad);
         writeln('Ingrese el sueldo: ');
         readln(p.sueldo);
-        p.trabaja:=true;
+        writeln('¨Trabaja? (si/no): ');
+        readln(respuesta);
+        if (respuesta='si') then
+                p.trabaja:=true
+        else
+                p.trabaja:=false;
+        writeln('');
         writeln('----------------');
         writeln('El nombre es: ', p.nombre);
         writeln('El sueldo es: ', (p.sueldo):4:2);

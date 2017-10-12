@@ -12,11 +12,13 @@ var
 begin
         repeat
                 clrscr;
-                writeln('----------------------');
-                writeln('1- Primera opcion del menu');
-                writeln('2- Segunda opcion del memu');
-                writeln('0- Salir del programa');
-                writeln('----------------------');
+                writeln('*******************************');
+                writeln('');
+                writeln('1 - Primera opcion del menu');
+                writeln('2 - Segunda opcion del memu');
+                writeln('0 - Salir del programa');
+                writeln('');
+                writeln('*******************************');
                 writeln('');
                 write('Ingrese una opcion del menu: ');
                 read(respuesta);

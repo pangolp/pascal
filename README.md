@@ -5,6 +5,8 @@ Cualquier consulta o sugerencia
 *	paganiwalter@gmail.com
 *	wpagani@frlp.utn.edu.ar
 
+[Grupo de facebook](https://www.facebook.com/groups/algoritmosutnfrlp)
+
 [Ejemplos en youtube](https://www.youtube.com/watch?v=-z_Pd9dWLgI&list=PLeqRLxsAm16QlzFnsBpfBPTuFt9i-lY-c)
 
 Algunos ejemplos de pascal
